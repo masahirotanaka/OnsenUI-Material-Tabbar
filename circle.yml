@@ -1,0 +1,20 @@
+general:
+  branches:
+    only:
+      - master
+machine:
+  node:
+    version: 0.12.7
+checkout:
+  post:
+dependencies:
+  override:
+    - npm install
+deployment:
+  release:
+    branch: master
+    commands:
+      - npm install -g monaca
+      - echo "${MONACA_PASS}" | monaca login "${MONACA_USER}"
+      - monaca remote build --platform=android --build-type=debug --android_webview=crosswalk --android_arch=arm
+
