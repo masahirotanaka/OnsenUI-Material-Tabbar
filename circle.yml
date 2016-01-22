@@ -7,6 +7,8 @@ machine:
     version: 0.12.7
 checkout:
   post:
+test:
+  override:
 dependencies:
   override:
 deployment:
@@ -16,4 +18,5 @@ deployment:
       - npm install -g monaca
       - echo "${MONACA_PASS}" | monaca login "${MONACA_USER}"
       - monaca remote build --platform=android --build-type=debug
-
+      - FILE=`find build -name *.apk`
+      - curl -F "status=2" -F "notify=1" -F "ipa=@{$FILE}" -H "X-HockeyAppToken: {$HOCKEY_APP_TOKEN}" https://rink.hockeyapp.net/api/2/apps/upload
