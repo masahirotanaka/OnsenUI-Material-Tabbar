@@ -9,6 +9,7 @@ checkout:
   post:
 test:
   override:
+    - /bin/true
 dependencies:
   override:
 deployment:
