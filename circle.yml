@@ -9,7 +9,6 @@ checkout:
   post:
 dependencies:
   override:
-    - npm install
 deployment:
   release:
     branch: master
