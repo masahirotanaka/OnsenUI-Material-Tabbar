@@ -18,4 +18,4 @@ deployment:
       - npm install -g monaca
       - echo "${MONACA_PASS}" | monaca login "${MONACA_USER}"
       - monaca remote build --platform=android --build-type=debug
-      - sh deploy.sh
+      - sh ./deploy.sh
