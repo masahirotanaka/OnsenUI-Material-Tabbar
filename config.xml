@@ -4,6 +4,8 @@
   <author/>
   <content src="index.html"/>
   <access origin="*"/>
+  <access origin="mailto:*" launch-external="yes" />
+
   <allow-navigation href="*"/>
   <allow-intent href="itms:*"/>
   <allow-intent href="itms-apps:*"/>

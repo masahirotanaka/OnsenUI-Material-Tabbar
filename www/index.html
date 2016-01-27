@@ -2,49 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">
+
 	<title>Onsen UI Material TabBar</title>
 
+  <script src="components/loader.js"></script>
   <script src="lib/onsen/js/onsenui.min.js"></script>
 
-  <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/app.js"></script>
-
+   
   <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <ons-navigator id="myNavigator">
-    <ons-page modifier="material" _muted>
-      <ons-toolbar modifier="material noshadow" class="contact-list-background-color">
-        <div class="center">New Contacts</div>
-        <div class="right">
-          <ons-toolbar-button modifier="material">
-            <ons-icon icon="md-search"></ons-icon>
-          </ons-toolbar-button>
-          <ons-toolbar-button modifier="material">
-            <ons-icon icon="md-more-vert"></ons-icon>
-          </ons-toolbar-button>
-        </div>
-      </ons-toolbar>
-
-      <ons-fab position="right bottom" class="contact-list-background-color" onclick="document.querySelector('#myNavigator').pushPage('html/add_contact.html', {animation: 'fade', animationOptions: {duration: 0.2, delay: 0.2, timing: 'linear'}})">
-        <ons-ripple></ons-ripple>
-        <ons-icon icon="md-account-add"></ons-icon>
-      </ons-fab>
-
-      <ons-tabbar position="top" modifier="material" animation="slide">
-        <ons-tab persistent page="html/fav_list.html" class="contact-list-background-color">
-          <ons-ripple>favorites</ons-ripple>
-        </ons-tab>
-        <ons-tab persistent page="html/all_list.html" active class="contact-list-background-color">
-          <ons-ripple>all contacts</ons-ripple>
-        </ons-tab>
-      </ons-tabbar>
-    </ons-page>
-  </ons-navigator>
-</body>
+<body ons-loading-placeholder="navigator.html"></body>
 
 </html>

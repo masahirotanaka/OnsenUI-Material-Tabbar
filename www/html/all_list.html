@@ -1,14 +1,5 @@
 <ons-page id="all_contacts" modifier="material">
+  <ons-progress-bar indeterminate style="position: absolute; width: 90%; top: 50%; left: 5%;"></ons-progress-bar>
   <ons-list modifier="material" class="all-contacts-list">
-    <ons-list-item modifier="material" onclick="document.querySelector('#myNavigator').pushPage('html/details_contact.html', {animation: 'lift', person: 'Dave Graham'})">
-      <div class="list__item__left">
-        <span class="contact-initials">Me</span>
-      </div>
-      <div class="list__item__center">
-        <ons-ripple color="rgba(0, 0, 0, 0.1)"></ons-ripple>
-        <img src="images/profile-image-08.png" class="list__item__thumbnail">
-        <div>Dave Graham</div>
-      </div>
-    </ons-list-item>
   </ons-list>
 </ons-page>
